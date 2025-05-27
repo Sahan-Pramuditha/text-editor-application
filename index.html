@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Meta Tags for SEO and Responsiveness-->
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- to enable mobile responsiveness -->
+    <meta name="description" content="Text editor with bold, italic, underline, text color, and alignment."> <!-- Description of the page for search engines -->
+    <meta name="keywords" content="text editor, rich text editor, formatting, bold, italic, underline, text color, alignment"> <!-- Keywords for search engines -->
+    <meta name="author" content="M S P Perera 2023t01885"> <!-- Author of the page -->
+   
+  
+    <link rel="icon" href="Ressources/favicon.png" type="image/png"> <!-- Favicon for the page -->
+
+    <title>Advanced Text Editor</title> <!-- Title of the page -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file for styling -->
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-edit"></i>Text Editor</h1> <!-- Main title of the page with an icon -->
+            
+        </header>
+
+        <div class="editor-container">
+            <div class="toolbar">
+                <div class="toolbar-group">
+                    <button id="boldBtn" class="toolbar-btn" title="Bold (Ctrl+B)"> <!-- Button for bold text -->
+                        <i class="fas fa-bold"></i>
+                    </button>
+                    <button id="underlineBtn" class="toolbar-btn" title="Underline (Ctrl+U)"> <!-- Button for underlining text -->
+                        <i class="fas fa-underline"></i>
+                    </button>
+                    <button id="italicBtn" class="toolbar-btn" title="Italic (Ctrl+I)"> <!-- Button for italic text -->
+                        <i class="fas fa-italic"></i>
+                    </button>
+                </div>
+
+                <div class="toolbar-group"> <!-- Group for text color picker -->
+                    <div class="color-picker-container">
+                        <label for="colorPicker" class="color-label"> <!-- Label for the color picker -->
+                            <i class="fas fa-palette"></i> <!-- Icon for the color picker -->
+                        </label>
+                        <input type="color" id="colorPicker" value="#000000" title="Text Color"> <!-- Color input for selecting text color -->
+                    </div>
+                </div>
+
+                <div class="toolbar-group">
+                    <button id="alignLeftBtn" class="toolbar-btn" title="Align Left"> <!-- Button for aligning text to the left -->
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button id="alignCenterBtn" class="toolbar-btn" title="Align Center"> <!-- Button for centering text -->
+                        <i class="fas fa-align-center"></i>
+                    </button>
+                    <button id="alignRightBtn" class="toolbar-btn" title="Align Right"> <!-- Button for aligning text to the right -->
+                        <i class="fas fa-align-right"></i>
+                    </button>
+                    <button id="alignJustifyBtn" class="toolbar-btn" title="Justify"> <!-- Button for justifying text -->
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+
+                <div class="toolbar-group">
+                    <button id="undoBtn" class="toolbar-btn" title="Undo (Ctrl+Z)"> <!-- Button for undoing the last action -->
+                        <i class="fas fa-undo"></i>
+                    </button>
+                    <button id="redoBtn" class="toolbar-btn" title="Redo (Ctrl+Y)"> <!-- Button for redoing the last undone action -->
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="editor-wrapper">
+                <div id="textEditor" class="text-editor" contenteditable="true" spellcheck="true" > <!-- Contenteditable div for the text editor -->
+                    <p>Start typing your content here...</p>
+                    
+                </div>
+            </div>
+            <div class="stats-bar">
+                <div class="stats-item">
+                    <i class="fas fa-font"></i>
+                    <span>Characters: <span id="charCount">0</span></span> <!-- Display for character count --> 
+                </div>
+                <div class="stats-item">
+                    <i class="fas fa-spell-check"></i>
+                    <span>Words: <span id="wordCount">0</span></span> <!--  Display for word count -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sahan Pramuditha</p> <!-- Footer with copyright information -->
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
